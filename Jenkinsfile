@@ -15,21 +15,15 @@
             }
             stage("Report") {
                 steps {
-                     sh "- allure generate report/allure-results/android -o report/allure-report/android"
-                     sh "- allure generate report/allure-results/iOS -o report/allure-report/iOS"
-                }
-            }
-            post {
-                always {
-                      script {
-                        allure([
-                          includeProperties: false,
-                          jdk: '',
-                          properties: [],
-                          reportBuildPolicy: 'ALWAYS',
-                          results: [[path: 'target/allure-results']]
-                        ])
-                      }
+                    script {
+                         allure([
+                           includeProperties: false,
+                           jdk: '',
+                           properties: [],
+                           reportBuildPolicy: 'ALWAYS',
+                           results: [[path: './report/allure-results/android'],[path: './report/allure-results/android']]
+                         ])
+                    }
                 }
             }
         }
