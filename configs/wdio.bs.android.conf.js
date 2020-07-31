@@ -14,7 +14,7 @@ exports.config = {
     browserstackLocal: true,
     
     specs: [
-        './test/**/*.js'    
+        './test/contacts/addContactTest.js'
     ],
     exclude:
     [],
@@ -23,13 +23,13 @@ exports.config = {
     // Capabilities
     // ============
   
-    maxInstances: 5,
+    maxInstances: 1,
     capabilities: [{
         automationName: "UiAutomator2",
-        device: "Samsung Galaxy A8", 
+        device: "Google Pixel 3",
         platformName: "Android",
-        os_version: "7.1", 
-        app: process.env.BROWSERSTACK_CUSTOM_ID_ANDROID,
+        os_version: "9.0",
+        app: process.env.BROWSERSTACK_APP_ID,
         autoAcceptAlerts:true,
         autoGrantPermissions:true,
         unicodeKeyboard: true,
