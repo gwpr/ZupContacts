@@ -27,7 +27,7 @@ config.capabilities =
         "appium:deviceName": "iPhone 8 Plus",
         "platformName": "iOS",
         "appium:platformVersion": "13.3",
-        "appium:app": '/Users/bi001965/Documents/ContactsSimulator.app',
+        "appium:app": path.join(__dirname, "../artefact/ContactsSimulator.app"),
         "appium:bundleId": "com.jayway.contacts",
         "appium:autoAcceptAlerts":true,
         "appium:autoGrantPermissions":true,
