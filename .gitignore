@@ -1,0 +1,13 @@
+node_modules
+package-lock.json
+*.apk
+report/allure-report/*
+report/allure-results/**/*.xml
+report/allure-results/**/*.png
+report/allure-results/**/*.log
+local.log
+browserstack.err
+core
+*.app.zip
+.idea/*
+backup
