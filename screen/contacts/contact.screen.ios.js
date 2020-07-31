@@ -4,10 +4,11 @@ import ContactAndroidScreen from "./contact.screen.android";
 
 export default class ContactIOSScreen extends ContactAndroidScreen {
 
-    get title() { return $(`android=${'new UiSelector().text("Contacts").className("android.widget.TextView")'}`); }
-    get search(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/main_search")'}`); }
-    get add(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/fab")'}`); }
-    get contact_name(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/name")'}`); }
+    get title() { return $("~Contacts");}
+    get search(){ return $("~Search for contact");}
+    get add(){ return $("~UIButtonBarNew");}
+    // get contact_name(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/name")'}`); }
+    set contact_name(text){ return $(`-ios predicate string:${`type == 'XCUIElementTypeStaticText' && value == '`+text+"'"}`);}
 
     getTextTitle(){
         return this.title.getText();

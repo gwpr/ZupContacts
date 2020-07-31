@@ -24,10 +24,10 @@ exports.config = {
     // Capabilities
     // ============
   
-    maxInstances: 3,
+    maxInstances: 1,
     capabilities: [{
         automationName: "XCUITest",
-        deviceName: "iPhone 11",
+        deviceName: "iPhone 11 Pro",
         platformName: "iOS",
         os_version: "13",
         app: process.env.BROWSERSTACK_CUSTOM_ID_IOS,

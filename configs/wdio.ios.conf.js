@@ -1,6 +1,7 @@
 const { config } = require('./wdio.shared.conf');
+const path = require('path');
 
-config.specs = 
+config.specs =
     [
        './test/**/*.js'
     ];
@@ -24,14 +25,11 @@ config.capabilities =
     [{
         maxInstances: 1,
         "appium:automationName": "XCUITest",
-        "appium:deviceName": "iPhone 8 Plus",
+        "appium:deviceName": "iPhone 11",
         "platformName": "iOS",
-        "appium:platformVersion": "13.3",
+        "appium:platformVersion": "13.6",
         "appium:app": path.join(__dirname, "../artefact/ContactsSimulator.app"),
-        "appium:bundleId": "com.jayway.contacts",
-        "appium:autoAcceptAlerts":true,
-        "appium:autoGrantPermissions":true,
-        "appium:noReset": false,
+        // "appium:bundleId": "com.jayway.contacts",
         "appium:newCommandTimeout": 120000
         }];
 

@@ -1,14 +1,14 @@
 import ProfileContactScreenAndroid from "./profile_contact.screen.android";
 
 export default class ProfileContactScreenIOS extends ProfileContactScreenAndroid{
-    get title() { return $(`android=${'new UiSelector().text("Contacts").className("android.widget.TextView")'}`); }
-    get detail_name(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/detail_name")'}`); }
-    get detail_icon(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/detail_icon")'}`); }
-    get phonenumber_tag(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/phonenumber_tag")'}`); }
+    get title() { return $("~Contact Details");}
+    set detail_name(text){ return $(`-ios predicate string:${`type == 'XCUIElementTypeStaticText' && value == '`+text+"'"}`);}
+    get detail_icon(){ return $('~contact_details')}
+    get phonenumber_tag(){ return $('~PHONE NUMBER')}
     get phonenumber(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/phonenumber")'}`); }
-    get email_tag(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/email_tag")'}`); }
+    get email_tag(){ return $('~EMAIL ADDRESS')}
     get email(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/email")'}`); }
-    get street_tag(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/street_tag")'}`); }
+    get street_tag(){ return $('~STREET ADDRESS')}
     get street1(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/street1")'}`); }
     get street2(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/street2")'}`); }
 

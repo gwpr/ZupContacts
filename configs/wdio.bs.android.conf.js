@@ -14,7 +14,7 @@ exports.config = {
     browserstackLocal: true,
     
     specs: [
-        './test/contacts/addContactTest.js'
+        './test/contacts/listContactByNameTest.js',
     ],
     exclude:
     [],
@@ -29,7 +29,7 @@ exports.config = {
         device: "Google Pixel 3",
         platformName: "Android",
         os_version: "9.0",
-        app: process.env.BROWSERSTACK_APP_ID,
+        app: process.env.BROWSERSTACK_CUSTOM_ID_ANDROID,
         autoAcceptAlerts:true,
         autoGrantPermissions:true,
         unicodeKeyboard: true,
