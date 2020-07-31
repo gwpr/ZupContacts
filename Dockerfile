@@ -7,7 +7,7 @@ USER root
 
 # Install Appium
 RUN npm install appium@1.17.1 -g --chromedriver-skip-install
-RUN npm -g allure-commandline
+RUN npm install -g allure-commandline
 
 #USER node
 WORKDIR /src
