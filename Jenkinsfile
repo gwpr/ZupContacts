@@ -10,7 +10,8 @@
             }
             stage("Test") {
               steps {
-               sh "npm run browserstack_android"
+               sh "npm run android"
+               sh "npm run ios"
               }
             }
             stage("Report") {
