@@ -7,6 +7,7 @@ import {contacts,profileContacts} from '../../constants'
 describe("Feature Contatos", ()  => {
     it("Verificar se o número de telefone não é vazio", () => {
         allureReporter.addFeature("Perfil Contatos");
+
         const name = names_contact.nameSort();
         contacts.selectContactByName(name);
         assert.notEqual(profileContacts.getTextPhoneNumber(), '', 'Campo Vazio');

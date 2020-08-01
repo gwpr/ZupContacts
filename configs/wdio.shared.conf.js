@@ -23,7 +23,7 @@ exports.config = {
     baseUrl: 'http://localhost',
     waitforTimeout: 60000,
     connectionRetryTimeout: 90000,
-    connectionRetryCount: 3,
+    connectionRetryCount: 10,
     services: ['appium'],
     appium: {
         command: 'appium'

@@ -3,9 +3,11 @@ const path = require('path');
 
 config.specs =
     [
-       './test/**/*.js'
+        // './test/contacts/listContactByNameTest.js'
+        // './test/contacts/openScreenContactTest.js'
+        './test/contacts/*'
     ];
-config.exclude = 
+config.exclude =
 [],
 config.suites =
     {

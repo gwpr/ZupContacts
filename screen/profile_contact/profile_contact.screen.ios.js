@@ -1,18 +1,19 @@
 import ProfileContactScreenAndroid from "./profile_contact.screen.android";
 
 export default class ProfileContactScreenIOS extends ProfileContactScreenAndroid{
-    get title() { return $("~Contact Details");}
+    get title() { return $("//XCUIElementTypeStaticText[@name='Contact Details']");}
     set detail_name(text){ return $(`-ios predicate string:${`type == 'XCUIElementTypeStaticText' && value == '`+text+"'"}`);}
     get detail_icon(){ return $('~contact_details')}
     get phonenumber_tag(){ return $('~PHONE NUMBER')}
-    get phonenumber(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/phonenumber")'}`); }
+    get phonenumber(){ return $("//XCUIElementTypeStaticText[@name='PHONE NUMBER']/following-sibling::XCUIElementTypeStaticText[1]"); }
     get email_tag(){ return $('~EMAIL ADDRESS')}
-    get email(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/email")'}`); }
+    get email(){ return $("//XCUIElementTypeStaticText[@name='EMAIL ADDRESS']/following-sibling::XCUIElementTypeStaticText[1]"); }
     get street_tag(){ return $('~STREET ADDRESS')}
-    get street1(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/street1")'}`); }
-    get street2(){ return $(`android=${'new UiSelector().resourceId("'+ process.env.PACKAGE +':id/street2")'}`); }
+    get street1(){ return $("//XCUIElementTypeStaticText[@name='STREET ADDRESS']/following-sibling::XCUIElementTypeStaticText[1]"); }
+    get street2(){ return $("//XCUIElementTypeStaticText[@name='STREET ADDRESS']/following-sibling::XCUIElementTypeStaticText[2]"); }
 
     getTextPhoneNumber(){
+        console.log('NÚMERO DO TELEFONE: '+this.phonenumber.getText());
         return this.phonenumber.getText();
     }
 
@@ -28,8 +29,8 @@ export default class ProfileContactScreenIOS extends ProfileContactScreenAndroid
         return this.title.getText();
     }
 
-    getNameDatail(){
-        return this.detail_name.getText();
+    getNameDatail(name){
+        return $(`(//XCUIElementTypeStaticText[@name='${name}'])[1]`).getText();
     }
 
 }

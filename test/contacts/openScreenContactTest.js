@@ -8,6 +8,7 @@ describe("Feature Contatos", ()  => {
 
     it("Deve consultar se o App abriu a tela de Contato", () => {
         allureReporter.addFeature("Contatos");
+
         assert.equal(contacts.getTextTitle(), 'Contacts', 'O nome exibido não corresponde ao inserido!');
     });
 });

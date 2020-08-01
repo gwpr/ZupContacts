@@ -10,5 +10,5 @@ const names =
 module.exports.nameSort = function () {
     var number = names.length;
 
-    return names[Math.floor(Math.random() * number + 1)]
+    return names[Math.floor(Math.random() * number)]
 }

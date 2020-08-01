@@ -8,8 +8,9 @@ describe("Feature Contatos", ()  => {
 
     it("Conferir se o nome do Perfil corresponde ao contato selecionado!", () => {
         allureReporter.addFeature("Perfil Contatos");
+
         const name = names_contact.nameSort();
         contacts.selectContactByName(name);
-        assert.equal(profileContacts.getNameDatail(), name, 'O nome exibido não corresponde ao inserido!');
+        assert.equal(profileContacts.getNameDatail(name), name, 'O nome exibido não corresponde ao inserido!');
     });
 });
