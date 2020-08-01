@@ -1,6 +1,6 @@
     pipeline {
         agent {
-          dockerfile none
+          dockerfile true
         }
         stages {
             stage("Build") {
@@ -10,8 +10,7 @@
             }
             stage("Test") {
               steps {
-               sh "npm run android"
-               sh "npm run ios"
+               sh "npm run browserstack_android"
               }
             }
             stage("Report") {
