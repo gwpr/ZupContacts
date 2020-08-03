@@ -2,6 +2,8 @@ FROM node:12
 
 USER root
 
+RUN export JAVA_HOME="$(dirname $(dirname $(readlink -f $(which java))))"
+
 # Install nodejs
 #RUN apk add --update nodejs-current npm
 
