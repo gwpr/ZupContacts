@@ -2,8 +2,8 @@ const { config } = require('./wdio.shared.conf');
 const path = require('path');
 config.specs = 
 [
-    // './test/**/*',
-    './test/contacts/listContactByNameTest.js',
+     './test/**/*',
+    // './test/contacts/listContactByNameTest.js',
     // './test/contacts/profileContactNameTest.js',
     // './test/contacts/backProfileToBeginTest.js',
 ],
