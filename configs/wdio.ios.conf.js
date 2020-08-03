@@ -5,7 +5,8 @@ config.specs =
     [
         // './test/contacts/listContactByNameTest.js'
         // './test/contacts/openScreenContactTest.js'
-        './test/contacts/*'
+        // './test/contacts/*'
+        './test/contacts/listContactByNameTest.js',
     ];
 config.exclude =
 [],
