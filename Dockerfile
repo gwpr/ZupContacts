@@ -12,6 +12,8 @@ RUN apt-get update && \
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
+RUN export JAVA_HOME="$(dirname $(dirname $(readlink -f $(which java))))"
+
 # Install Appium
 RUN npm install appium@1.17.1 -g --chromedriver-skip-install
 RUN npm install -g allure-commandline

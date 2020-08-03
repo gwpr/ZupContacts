@@ -21,7 +21,7 @@
                            jdk: '',
                            properties: [],
                            reportBuildPolicy: 'ALWAYS',
-                           results: [[path: './report/allure-results/']
+                           results: [[path: './report/allure-results/android'],[path: './report/allure-results/iOS']]
                          ])
                     }
                 }
