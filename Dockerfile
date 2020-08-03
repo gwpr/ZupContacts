@@ -9,6 +9,7 @@ RUN apt-get update && \
     openjdk-8-jdk
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+
 RUN export JAVA_HOME="$(dirname $(dirname $(readlink -f $(which java))))"
 
 # Install Appium
