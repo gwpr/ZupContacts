@@ -2,6 +2,8 @@ FROM node:12
 
 USER root
 
+# Install nodejs
+#RUN apk add --update nodejs-current npm
 # install packages
 RUN apt-get update && \
     apt-get install -y curl \
