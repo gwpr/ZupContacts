@@ -14,8 +14,8 @@ exports.config = {
     browserstackLocal: true,
     
     specs: [
-        // './test/contacts/*',
-        './test/contacts/listContactByNameTest.js',
+        './test/**/*',
+        // './test/contacts/listContactByNameTest.js',
     ],
     exclude:
     [],
