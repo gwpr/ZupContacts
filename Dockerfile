@@ -2,9 +2,6 @@ FROM node:12
 
 USER root
 
-# Install nodejs
-#RUN apk add --update nodejs-current npm
-
 # install packages
 RUN apt-get update && \
     apt-get install -y curl \
@@ -12,6 +9,7 @@ RUN apt-get update && \
     openjdk-8-jdk
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+RUN export JAVA_HOME="$(dirname $(dirname $(readlink -f $(which java))))"
 
 # Install Appium
 RUN npm install appium@1.17.1 -g --chromedriver-skip-install
