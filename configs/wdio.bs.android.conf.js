@@ -55,7 +55,7 @@ exports.config = {
     framework: 'mocha',
     reporters: [
           ['allure', {
-            outputDir: './report/allure-results/android',
+            outputDir: './allure-results',
             disableWebdriverStepsReporting: true,
             disableWebdriverScreenshotsReporting: false,
             }],
