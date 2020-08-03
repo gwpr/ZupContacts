@@ -15,7 +15,6 @@
             }
             stage("Report") {
                 steps {
-                    sh "allure generate report/allure-results/android -o report/allure-report/android"
                     script {
                          allure([
                            includeProperties: false,
