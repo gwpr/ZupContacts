@@ -2,7 +2,15 @@ FROM node:12
 
 USER root
 
-RUN export JAVA_HOME="$(dirname $(dirname $(readlink -f $(which java))))"
+# install packages
+RUN apt-get update && \
+    apt-get install -y curl \
+    wget \
+    openjdk-8-jdk
+
+ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+
+/# echo $JAVA_HOME
 
 # Install nodejs
 #RUN apk add --update nodejs-current npm
