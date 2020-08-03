@@ -10,8 +10,6 @@ RUN apt-get update && \
 
 ENV JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
 
-/# echo $JAVA_HOME
-
 # Install nodejs
 #RUN apk add --update nodejs-current npm
 
