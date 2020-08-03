@@ -42,3 +42,6 @@ Existe um arquivo de configuração para cada tipo de execução:
 
 ## CI
   Espera-se que o executador esteja com o Docker/Jenkis instalado e configurado com o Plugin do Allure.
+  - CI Android: `Configurar a pipeline apontando para a Branch android_ci`
+  - CI iOS: `Configurar a pipeline apontando para a Branch ios_ci`
+  
