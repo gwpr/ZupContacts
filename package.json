@@ -6,8 +6,8 @@
   "scripts": {
     "android": "./node_modules/.bin/wdio ./configs/wdio.android.conf.js",
     "ios": "./node_modules/.bin/wdio ./configs/wdio.ios.conf.js",
-    "browserstack_android": "NODE_ENV=app ./node_modules/.bin/wdio ./configs/wdio.bs.android.conf.js",
-    "browserstack_ios": "NODE_ENV=app ./node_modules/.bin/wdio ./configs/wdio.bs.ios.conf.js",
+    "browserstack_android": "./node_modules/.bin/wdio ./configs/wdio.bs.android.conf.js",
+    "browserstack_ios": "./node_modules/.bin/wdio ./configs/wdio.bs.ios.conf.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
