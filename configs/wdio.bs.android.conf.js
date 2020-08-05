@@ -1,5 +1,6 @@
 const { join } = require("path");
 const time = require("../data/time-config");
+require('dotenv').config();
 
 exports.config = {
     // ====================
