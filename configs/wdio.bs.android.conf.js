@@ -18,7 +18,7 @@ exports.config = {
         './test/contacts/listContactByNameTest.js',
     ],
     exclude:
-    [],
+    ['./test/contacts/addContactTest.js'],
     suites:{},
     // ============
     // Capabilities
