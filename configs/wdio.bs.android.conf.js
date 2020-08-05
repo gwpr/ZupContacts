@@ -1,8 +1,5 @@
 const { join } = require("path");
 const time = require("../data/time-config");
-require('dotenv').config({  
-    path: process.env.NODE_ENV === "test" ? ".env.testing" : ".env"
-  })
 
 exports.config = {
     // ====================
